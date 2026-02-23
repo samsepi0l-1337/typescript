@@ -57,12 +57,9 @@ async function mineBlocks() {
     blockchain.addBlock(`${number}`);
     number += 1;
     console.log(blockchain.getBlocks());
-
-    // 1초 대기
     await new Promise((resolve) => setTimeout(resolve, 1000));
   }
 }
 
-// 실행
 mineBlocks().catch(console.error);
 // console.log(blockchain.getBlocks());
