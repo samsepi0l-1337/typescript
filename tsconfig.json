@@ -1,0 +1,7 @@
+{
+  "inlcude": ["src"],
+  "compilerOptions": {
+    "outDir": "build",
+    "target": "es6"
+  }
+}

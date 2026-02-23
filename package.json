@@ -1,0 +1,23 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samsepi0l-1337/typescript.git"
+  },
+  "keywords": [ ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/samsepi0l-1337/typescript/issues"
+  },
+  "homepage": "https://github.com/samsepi0l-1337/typescript#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
