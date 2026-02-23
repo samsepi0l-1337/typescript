@@ -1,35 +1,24 @@
-interface User {
-  firstName: string;
+type PlayerA = {
+  name: string;
+};
+type PlayerAA = PlayerA & {
   lastName: string;
-  sayHi(name: string): string;
-  fullName(): string;
+};
+const playerA: PlayerAA = {
+  name: "samsepi0l",
+  lastName: "sepi0l",
+};
+interface PlayerB {
+  name: string;
 }
-
-interface Human {
+interface PlayerBB extends PlayerB {
+  lastName: string;
+}
+interface PlayerBB {
   health: number;
 }
-
-class Player implements User, Human {
-  constructor(
-    public firstName: string,
-    public lastName: string,
-    public health: number,
-  ) {}
-  fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
-  sayHi(name: string) {
-    return `Hello ${name}. My name is ${this.fullName()}`;
-  }
-}
-
-function makeUser(user: User) {
-  return "hi";
-}
-
-makeUser({
-  firstName: "sam",
+const playerB: PlayerBB = {
+  name: "samsepi0l",
   lastName: "sepi0l",
-  fullName: () => "samsepi0l",
-  sayHi: (name) => "hello",
-});
+  health: 10,
+};
