@@ -1,37 +1,13 @@
-type Words = {
-  [key: string]: string;
+type Player = {
+  nickname: string;
+  healthBar: number;
 };
 
-class Dict {
-  private words: Words;
-  constructor() {
-    this.words = {};
-  }
+const sepi: Player = {
+  nickname: "sepi",
+  healthBar: 10,
+};
 
-  add(word:Word) {
-    if(this.words[word.term] === undefined) {
-      this.words[word.term] = word.def;
-  }
+type Food = string;
 
-  def(term:string) {
-    return this.words[term]
-  }
-  static hello() {
-    return "hello"
-  }
-}
-
-class Word {
-  constructor(
-    public readonly term: string,
-    public readonly def: string,
-  ) {}
-}
-
-const kimchi = new Word("kimchi", "korean food")
-const dict = new Dict()
-
-dict.add(kimchi)
-dict.def("kimchi")
-
-Dict.hello()
+const kimchi: Food = "delicious";
