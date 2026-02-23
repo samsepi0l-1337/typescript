@@ -1,13 +1,14 @@
-type Nickname = string;
-type Health = number;
-type Friends = Array<string>;
+type Team = "red" | "blue" | "yellow";
+type Health = 1 | 5 | 10;
 
 type Player = {
   nickname: string;
-  healthBar: number;
+  team: Team;
+  health: Health;
 };
 
 const sepi: Player = {
   nickname: "sepi",
-  healthBar: 10,
+  team: "red",
+  health: 10,
 };
