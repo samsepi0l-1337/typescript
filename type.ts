@@ -1,24 +1,10 @@
 type PlayerA = {
-  name: string;
-};
-type PlayerAA = PlayerA & {
-  lastName: string;
-};
-const playerA: PlayerAA = {
-  name: "samsepi0l",
-  lastName: "sepi0l",
+  firstName: string;
 };
 interface PlayerB {
-  name: string;
+  firstName: string;
 }
-interface PlayerBB extends PlayerB {
-  lastName: string;
+
+class User implements PlayerB {
+  constructor(public firstName: string) {}
 }
-interface PlayerBB {
-  health: number;
-}
-const playerB: PlayerBB = {
-  name: "samsepi0l",
-  lastName: "sepi0l",
-  health: 10,
-};
