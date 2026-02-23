@@ -2,8 +2,16 @@ interface User {
   name: string;
 }
 
-interface Player extends User {}
+interface User {
+  lastName: string;
+}
 
-const sepi: Player = {
-  name: "sepi",
+interface User {
+  health: number;
+}
+
+const sepi: User = {
+  name: "samsepi0l",
+  lastName: "sepi0l",
+  health: 10,
 };
