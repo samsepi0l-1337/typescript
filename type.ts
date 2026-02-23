@@ -7,6 +7,12 @@ type Player = {
   health: Health;
 };
 
+interface Person {
+  nickname: string;
+  team: Team;
+  health: Health;
+}
+
 const sepi: Player = {
   nickname: "sepi",
   team: "red",
