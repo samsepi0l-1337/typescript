@@ -22,3 +22,14 @@ class Player implements User, Human {
     return `Hello ${name}. My name is ${this.fullName()}`;
   }
 }
+
+function makeUser(user: User) {
+  return "hi";
+}
+
+makeUser({
+  firstName: "sam",
+  lastName: "sepi0l",
+  fullName: () => "samsepi0l",
+  sayHi: (name) => "hello",
+});
