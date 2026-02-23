@@ -40,7 +40,7 @@ class Blockchain {
     this.blocks.push(newBlock);
   }
   public getBlocks() {
-    return [...this.blocks];
+    return this.blocks;
   }
 }
 
@@ -50,6 +50,19 @@ blockchain.addBlock("First One");
 blockchain.addBlock("Second One");
 blockchain.addBlock("Third One");
 
-blockchain.getBlocks().push(new Block("xxxx", 11111, "HACKEDDDDD"));
+async function mineBlocks() {
+  let number = 1;
 
-console.log(blockchain.getBlocks());
+  while (true) {
+    blockchain.addBlock(`${number}`);
+    number += 1;
+    console.log(blockchain.getBlocks());
+
+    // 1초 대기
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+  }
+}
+
+// 실행
+mineBlocks().catch(console.error);
+// console.log(blockchain.getBlocks());
