@@ -7,3 +7,5 @@ class Block {
         return "hi";
     }
 }
+document.querySelector();
+localStorage.getItem();
