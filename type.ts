@@ -4,7 +4,7 @@ function superPrint<V>(a: V[]) {
 
 const a = superPrint([1, 2, 3, 4]);
 const b = superPrint([true, false, true]);
-const c = superPrint(['a', 'b', 'c']);
+const c = superPrint(["a", "b", "c"]);
 const d = superPrint([1, 2, true, false]);
 
 console.log(a, b, c, d);
@@ -19,14 +19,14 @@ type SepiExtra = {
 type SepiPlayer = Player<SepiExtra>;
 
 const sepi: SepiPlayer = {
-  name: 'sepi',
+  name: "sepi",
   extraInfo: {
-    favFood: 'hamburger',
+    favFood: "hamburger",
   },
 };
 
 const elliot: Player<null> = {
-  name: 'elliot',
+  name: "elliot",
   extraInfo: null,
 };
 
